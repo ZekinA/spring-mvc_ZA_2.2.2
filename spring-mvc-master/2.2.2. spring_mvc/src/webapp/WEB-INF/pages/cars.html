@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>spring mvc</title>
+    <style>
+        TABLE {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th {
+            text-align: left;
+            background: #ccc;
+            padding: 4px;
+            border: 1px solid black;
+        }
+        td {
+            padding: 4px;
+            border: 1px solid black; 
+        }
+
+    </style>
+</head>
+<body>
+<h1>Cars</h1>
+<table>
+    <tr>
+        <th>Model</th>
+        <th>Color</th>
+        <th>SerialNumber</th>
+    </tr>
+    <tr th:each="car,state:${cars}">
+        <td th:utext="${car.model}">age</td>
+        <td th:utext="${car.color}">Model</td>
+        <td th:utext="${car.serialnumber}">Series</td>
+    </tr>
+</table>
+
+</body>
+</html>
